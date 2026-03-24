@@ -1,0 +1,35 @@
+---
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/projects", label: "Projects" },
+  { href: "/service-areas", label: "Service Areas" },
+  { href: "/contact", label: "Contact" }
+];
+---
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="LLUKA Construction Home">
+      <span class="brand-mark">LC</span>
+      <span>
+        <strong>LLUKA Construction</strong>
+        <small>Licensed &amp; Insured</small>
+      </span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        {navLinks.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="nav-ctas">
+      <a class="btn btn-outline" href="tel:+19147559606">Call Now</a>
+      <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+    </div>
+  </div>
+</header>

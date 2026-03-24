@@ -6,18 +6,19 @@ import MainLayout from "../layouts/MainLayout.astro";
   title="Premium Construction Services"
   description="LLUKA Construction delivers trusted remodeling and construction services in Westchester County and Connecticut."
 >
-  <section class="hero">
+  <div class="home-dark">
+  <section class="hero hero-background">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">Westchester County &amp; Connecticut</span>
-        <h1>Premium Construction and Remodeling With Proven Local Craftsmanship</h1>
-        <p>
-          LLUKA Construction delivers high-standard residential and light commercial construction with clear
-          communication, disciplined project management, and detail-driven execution.
+        <h1 class="hero-brand-title">LLUKA Construction</h1>
+        <h2 class="hero-subheadline">Premium Remodeling &amp; Construction You Can Trust</h2>
+        <p class="hero-support-line">
+          Serving Westchester County &amp; Connecticut with precision, reliability, and craftsmanship built
+          to last
         </p>
         <div class="nav-ctas">
           <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
-          <a class="btn btn-outline" href="tel:+12035551234">Call Now</a>
+          <a class="btn btn-outline" href="tel:+19147559606">Call Now</a>
         </div>
         <div class="trust-badges">
           <span class="badge">Licensed &amp; Insured</span>
@@ -48,7 +49,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-soft">
     <div class="container">
       <span class="eyebrow">What We Do</span>
       <h2>Our Core Services</h2>
@@ -84,7 +85,51 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </section>
 
-  <section class="section project-feature">
+  <section class="section section-white owner-spotlight">
+    <div class="container spotlight-grid spotlight-grid-premium">
+      <figure class="spotlight-media spotlight-media-premium">
+        <img src="/images/projects/Johnny/johnny-owner.jpeg" alt="Johnny, owner of LLUKA Construction" loading="lazy" />
+      </figure>
+      <article class="spotlight-content spotlight-content-premium">
+        <span class="eyebrow">Owner Spotlight</span>
+        <h2>Meet Johnny, Owner of LLUKA Construction</h2>
+        <p class="lead-copy">
+          Johnny has over 18 years of hands-on construction experience across residential and commercial
+          projects. Based in Mahopac, New York, he has built LLUKA Construction on hard work, honest
+          communication, and quality craftsmanship clients can trust across Westchester County and
+          Connecticut.
+        </p>
+        <ul class="value-list">
+          <li>Man of his word with a reputation built over many years</li>
+          <li>Hands-on leadership and detail-oriented project execution</li>
+          <li>Clean job sites, reliable timelines, and strong results</li>
+        </ul>
+        <div class="nav-ctas">
+          <a class="btn btn-primary" href="tel:+19147559606">Call Now</a>
+          <a class="btn btn-outline" href="/about">Learn More About Johnny</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-dark owner-cta-band">
+    <div class="container owner-cta-wrap">
+      <div>
+        <span class="kicker">Trusted Local Contractor</span>
+        <h2>Talk Directly With Johnny About Your Next Project</h2>
+        <p>
+          If you want honest guidance, strong execution, and results you can feel confident about, call
+          LLUKA Construction today.
+        </p>
+      </div>
+      <div class="nav-ctas">
+        <a class="btn btn-ghost-light" href="tel:+19147559606">Call Now</a>
+        <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white project-feature">
     <div class="container">
       <span class="eyebrow">Featured Project</span>
       <h2>Deck Remodel in Progress to Finished Result</h2>
@@ -109,7 +154,32 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </section>
 
-  <section class="section testimonial-section">
+  <section class="section section-soft">
+    <div class="container">
+      <span class="eyebrow">Featured Project</span>
+      <h2>Fireplace Stone Install</h2>
+      <p>
+        Custom stone fireplace installation featuring precision stonework, vertical accent design, and a
+        clean finished centerpiece that adds warmth, texture, and luxury to the space.
+      </p>
+      <div class="project-gallery">
+        <figure class="gallery-item wide">
+          <img src="/images/projects/fireplace-stone-1/fireplace-finished-1.jpeg" alt="Finished custom stone fireplace centerpiece" loading="lazy" />
+          <figcaption>Finished Result</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="/images/projects/fireplace-stone-1/fireplace-progress-3.jpeg" alt="Fireplace stone installation in progress" loading="lazy" />
+          <figcaption>In Progress</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="/images/projects/fireplace-stone-1/fireplace-detail-3.jpeg" alt="Detail close-up of custom stone fireplace finish" loading="lazy" />
+          <figcaption>Detail View</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white testimonial-section">
     <div class="container">
       <span class="eyebrow">Client Feedback</span>
       <h2>What Clients Appreciate About Working With LLUKA</h2>
@@ -141,7 +211,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band section-dark">
     <div class="container cta-box">
       <div>
         <span class="kicker">Start Your Project</span>
@@ -150,8 +220,9 @@ import MainLayout from "../layouts/MainLayout.astro";
       </div>
       <div class="nav-ctas">
         <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
-        <a class="btn btn-ghost-light" href="tel:+12035551234">Call Now</a>
+        <a class="btn btn-ghost-light" href="tel:+19147559606">Call Now</a>
       </div>
     </div>
   </section>
+  </div>
 </MainLayout>
