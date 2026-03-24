@@ -6,9 +6,26 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
 }
 
-const { title, description = "LLUKA Construction is a licensed and insured contractor serving Westchester County and Connecticut." } = Astro.props;
+const {
+  title,
+  description = "LLUKA Construction is a licensed and insured contractor serving Westchester County and Connecticut.",
+  ogTitle,
+  ogDescription,
+  ogImage = "/images/projects/deck-remodel-1/deck-finished.jpeg",
+  ogType = "website",
+  twitterCard = "summary_large_image"
+} = Astro.props;
+
+const pageTitle = title === "LLUKA Construction" ? title : `${title} | LLUKA Construction`;
+const resolvedOgTitle = ogTitle ?? pageTitle;
+const resolvedOgDescription = ogDescription ?? description;
 ---
 
 <!doctype html>
@@ -17,7 +34,15 @@ const { title, description = "LLUKA Construction is a licensed and insured contr
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <title>{title} | LLUKA Construction</title>
+    <meta property="og:title" content={resolvedOgTitle} />
+    <meta property="og:description" content={resolvedOgDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content={ogType} />
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:title" content={resolvedOgTitle} />
+    <meta name="twitter:description" content={resolvedOgDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <title>{pageTitle}</title>
   </head>
   <body>
     <Header />
