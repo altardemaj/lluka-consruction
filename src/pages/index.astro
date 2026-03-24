@@ -1,11 +1,157 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout
+  title="Premium Construction Services"
+  description="LLUKA Construction delivers trusted remodeling and construction services in Westchester County and Connecticut."
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Westchester County &amp; Connecticut</span>
+        <h1>Premium Construction and Remodeling With Proven Local Craftsmanship</h1>
+        <p>
+          LLUKA Construction delivers high-standard residential and light commercial construction with clear
+          communication, disciplined project management, and detail-driven execution.
+        </p>
+        <div class="nav-ctas">
+          <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+          <a class="btn btn-outline" href="tel:+12035551234">Call Now</a>
+        </div>
+        <div class="trust-badges">
+          <span class="badge">Licensed &amp; Insured</span>
+          <span class="badge">Locally Trusted Team</span>
+          <span class="badge">Quality Workmanship</span>
+          <span class="badge">Transparent Timelines</span>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <h2>Built for Confidence</h2>
+        <ul>
+          <li>Dedicated oversight from planning through completion</li>
+          <li>Professional crews and clean, organized worksites</li>
+          <li>Premium materials matched to your project goals</li>
+          <li>Consistent updates from quote to final walkthrough</li>
+        </ul>
+        <div class="hero-meta">
+          <div class="stat">
+            <strong>Westchester County</strong>
+            <span>Primary NY service area</span>
+          </div>
+          <div class="stat">
+            <strong>Connecticut</strong>
+            <span>Serving nearby communities</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">What We Do</span>
+      <h2>Our Core Services</h2>
+      <div class="grid grid-3">
+        <article class="card service-card">
+          <div class="service-icon">PL</div>
+          <h3>Plumbing</h3>
+          <p>
+            Installations, repairs, and strategic system upgrades for kitchens, bathrooms, and full-home
+            remodels.
+          </p>
+          <a href="/services/plumbing" class="service-link">Learn More</a>
+        </article>
+        <article class="card service-card">
+          <div class="service-icon">GC</div>
+          <h3>General Construction</h3>
+          <p>
+            Framing, interior and exterior improvements, and reliable project coordination from start to
+            finish.
+          </p>
+          <a href="/services/general-construction" class="service-link">Learn More</a>
+        </article>
+        <article class="card service-card">
+          <div class="service-icon">RM</div>
+          <h3>Bathroom &amp; Kitchen Remodeling</h3>
+          <p>
+            Tailored remodeling solutions that combine premium finishes, practical layouts, and long-term
+            durability.
+          </p>
+          <a href="/services" class="service-link">Explore Services</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section project-feature">
+    <div class="container">
+      <span class="eyebrow">Featured Project</span>
+      <h2>Deck Remodel in Progress to Finished Result</h2>
+      <p>
+        A recent deck remodel showcasing structural progress, finish carpentry, and a final clean,
+        high-quality outdoor space.
+      </p>
+      <div class="project-gallery">
+        <figure class="gallery-item wide">
+          <img src="/images/projects/deck-remodel-1/deck-progress.jpeg" alt="Deck remodel in progress view" loading="lazy" />
+          <figcaption>In Progress</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="/images/projects/deck-remodel-1/deck-finished.jpeg" alt="Finished deck remodel result angle one" loading="lazy" />
+          <figcaption>Finished Result</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="/images/projects/deck-remodel-1/deck-finished-1.jpeg" alt="Finished deck remodel result angle two" loading="lazy" />
+          <figcaption>Finished Result</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonial-section">
+    <div class="container">
+      <span class="eyebrow">Client Feedback</span>
+      <h2>What Clients Appreciate About Working With LLUKA</h2>
+      <div class="grid grid-3">
+        <article class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>
+            The crew was professional from day one. The scope, schedule, and communication were clear the
+            entire time.
+          </p>
+          <div class="author">Homeowner, Westchester County</div>
+        </article>
+        <article class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>
+            Our kitchen remodel turned out exactly as planned. The team kept the site clean and stayed on
+            timeline.
+          </p>
+          <div class="author">Residential Client, Connecticut</div>
+        </article>
+        <article class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>
+            Reliable, transparent, and detail-focused. We felt confident at every milestone of the project.
+          </p>
+          <div class="author">Property Owner, Regional Service Area</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container cta-box">
+      <div>
+        <span class="kicker">Start Your Project</span>
+        <h2>Ready to Build With a Team You Can Trust?</h2>
+        <p>Request a clear, no-obligation estimate for projects in Westchester County and Connecticut.</p>
+      </div>
+      <div class="nav-ctas">
+        <a class="btn btn-primary" href="/contact">Get a Free Estimate</a>
+        <a class="btn btn-ghost-light" href="tel:+12035551234">Call Now</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
